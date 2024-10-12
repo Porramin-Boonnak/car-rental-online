@@ -1,5 +1,5 @@
 import './css/selectcar.css'
-export default function home() {
+export default function Selectcar() {
     return (<>
     <div id='mainpage'>
         <img id='carpictures' src='https://images3.alphacoders.com/134/1342988.png'/>

@@ -1,5 +1,5 @@
 import './css/Home.css'
-export default function home() {
+export default function Home() {
     return (<>
 
         <div>
