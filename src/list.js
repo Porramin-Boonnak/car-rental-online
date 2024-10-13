@@ -1,8 +1,13 @@
 import './css/list.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const Item=(props)=>{
-    return (<div>
+    const navigate = useNavigate();
+    const selectcar = () => {
+        navigate('/selectcar', { state: { item: props } });
+      };
+    return (<div onClick={() => selectcar(props)}>
         <img src={props.img} id='carpictureslist'/><br/>
         id: {props.id}<br/>
         Name: {props.name}<br/>
