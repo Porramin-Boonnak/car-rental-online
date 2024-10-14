@@ -2,12 +2,17 @@ import './css/list.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-const Item=(props)=>{
+const Item=({props,start,end})=>{
     const navigate = useNavigate();
     const selectcar = () => {
-        navigate('/selectcar', { state: { item: props } });
+        navigate('/selectcar', { state: { item: props,date_start:start,date_end:end } });
       };
-    return (<div onClick={() => selectcar(props)}>
+    return (<div onClick={() => {
+        if (start !== undefined && end !== undefined) {
+            selectcar();
+        } else {
+            alert("Please select start and end dates.");
+        }}}>
         <img src={props.img} id='carpictureslist'/><br/>
         id: {props.id}<br/>
         Name: {props.name}<br/>
@@ -19,6 +24,8 @@ export default function List(){
     const [products,setProducts] = useState([])
     const [location,setlocation] = useState("empty");
     const [types,settypes] = useState("empty");
+    const [start,setstart] = useState();
+    const [end,setend] = useState();
     const url = "http://localhost:5000";
     useEffect(()=>{
         axios.get(url+'/api/car').then(response=>{
@@ -30,25 +37,32 @@ export default function List(){
 
         }
     },[])
-    var productlist=products.filter(item => (item.location === location || location === "empty") && (item.type === types || types === "empty")).map(item => <Item {...item} />);
+    var productlist=products.filter(item => (item.location === location || location === "empty") && (item.type === types || types === "empty"))
+    .map(item => <Item props={item} start={start} end={end}/>);
     const hendlechange=(event)=>{
         setlocation(event.target.value);
     }
     const hendleclick=(event)=>{
         settypes(event.target.value);
     }
+    const date_start=(event)=>{
+        setstart(event.target.value)
+    }
+    const date_end=(event)=>{
+        setend(event.target.value)
+    }
     return (<>
     <div id='main'>
         <label id='textstartlist'>Start</label>
             <input
-                type="datetime-local"
+                type="date"
                 id='startlist'
-                />
+                onChange={date_start}/>
             <label id='textendlist'>End</label>
             <input
-                type="datetime-local"
+                type="date"
                 id='endlist'
-                />
+                onChange={date_end}/>
             <select id="locationlist" onChange={hendlechange}>
             <option value="empty">--Please choose a location--</option>
             <option value="bangkok">Bangkok</option>
