@@ -7,14 +7,13 @@ const Item=({props,start,end})=>{
     const selectcar = () => {
         navigate('/selectcar', { state: { item: props,date_start:start,date_end:end } });
       };
-    return (<div onClick={() => {
+    return (<div id='item' onClick={() => {
         if (start !== undefined && end !== undefined) {
             selectcar();
         } else {
             alert("Please select start and end dates.");
         }}}>
         <img src={props.img} id='carpictureslist'/><br/>
-        id: {props.id}<br/>
         Name: {props.name}<br/>
         Price: {props.price}<br/>
         location: {props.location}<br/>

@@ -4,6 +4,7 @@ import Selectcar from "./selectcar"
 import List from "./list"
 import Payment from "./Payment"
 import Thx from "./Thx"
+import Admin from "./admin";
 export default function Router() {
     return (
       <BrowserRouter>
@@ -13,6 +14,7 @@ export default function Router() {
           <Route path="/list" element={<List />}/>
           <Route path="/Payment" element={<Payment />}/>
           <Route path="/Thx" element={<Thx />}/>
+          <Route path="/admin" element={<Admin />}/>
         </Routes>
       </BrowserRouter>
     );

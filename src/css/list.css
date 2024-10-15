@@ -69,3 +69,9 @@
     width: 300px;
     border-radius: 20px;
 }
+#item{
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
+}
