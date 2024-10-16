@@ -6,6 +6,7 @@ import Payment from "./Payment"
 import Thx from "./Thx"
 import Admin from "./admin";
 import Login from "./login"
+import Signup from "./signup"
 export default function Router() {
     return (
       <BrowserRouter>
@@ -17,6 +18,7 @@ export default function Router() {
           <Route path="/Thx" element={<Thx />}/>
           <Route path="/admin" element={<Admin />}/>
           <Route path="/login" element={<Login />}/>
+          <Route path="/signup" element={<Signup />}/>
         </Routes>
       </BrowserRouter>
     );
