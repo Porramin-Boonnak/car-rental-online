@@ -23,7 +23,7 @@ export default function Signup() {
         setemail(event.target.value);
     }
     const hendleclick=()=>{
-        if(username!=undefined&&password!=undefined&&email!=undefined)
+        if(username!==undefined&&password!==undefined&&email!==undefined)
         {
             axios.post(url+'/api/customer',customer).then(response=>{
                 const {id} = response.data[0];

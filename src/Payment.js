@@ -1,7 +1,9 @@
 import './css/Payment.css'
 import { useLocation,useNavigate } from 'react-router-dom';
 import Img from './Tag.jpg'
+import axios from 'axios';
 export default function Payment() {
+    const url = "http://localhost:5000";
     const location = useLocation();
     const navigate = useNavigate();
     const { item } = location.state;
@@ -35,7 +37,7 @@ export default function Payment() {
     }
     return (<>
     <div id='mainpagePayment'>
-        <img id='carpicturesPayment' src={item.img}/>
+        <img id='carpicturesPayment' src={item.img} alt='car'/>
         <span id='textboxPayment'>
             <label id='pricePayments'>{item.price} /day</label>
             <label id='receivePayment'>สถานที่รับ </label>
@@ -51,7 +53,7 @@ export default function Payment() {
             <label id='end'>{formatDate(date_end)}</label>
         </div>
 
-             <img id = "imgscan"src = {Img}/>
+             <img id = "imgscan"src = {Img} alt='QRPayment'/>
              <div id = "pricepaymentss">
              <label> ยอดที่ต้องจ่าย </label>
                 <ul>
