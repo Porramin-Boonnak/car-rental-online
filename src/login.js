@@ -1,9 +1,8 @@
 import './css/login.css'
-import { useLocation } from 'react-router-dom';
 export default function login() {
     return (<>
         <div id='mainlogin'>
-            <img id="logopiclogin" src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" />
+            <img id="logopiclogin" src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt='car'/>
             <div id="bluebox">
                 <div id="username">
                     <label>USERNAME/EMAIL</label>

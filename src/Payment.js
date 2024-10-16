@@ -21,6 +21,16 @@ export default function Payment() {
         return `${dayOfWeek} ${day} ${month} ${year}`;
     }
     const hendleclick=()=>{
+        const detail = {
+            id_customer:localStorage.getItem('id'),
+            rent_car:item.id,
+            date_start:date_start,
+            date_end:date_end,
+            return_location:locationreturn,
+            rent_late:0,
+            income:item.price
+        }
+        axios.post(url+'/api/rentcar',detail)
         navigate('/Thx', { state: { item: item} });
     }
     return (<>
