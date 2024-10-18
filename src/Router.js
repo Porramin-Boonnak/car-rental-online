@@ -7,6 +7,7 @@ import Thx from "./Thx"
 import Admin from "./admin";
 import Login from "./login"
 import Signup from "./signup"
+import Status from "./status"
 export default function Router() {
     return (
       <BrowserRouter>
@@ -19,6 +20,7 @@ export default function Router() {
           <Route path="/admin" element={<Admin />}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/signup" element={<Signup />}/>
+          <Route path="/status" element={<Status />}/>
         </Routes>
       </BrowserRouter>
     );
