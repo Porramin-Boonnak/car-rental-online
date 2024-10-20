@@ -41,7 +41,7 @@ export default function Deletepage(){
     }
     const id = useRef(null);
     const Handleclick=()=>{
-        if(!rent_car.map(item => item.rent_car).includes(id.current.value)||rent_car.map(item => item.status).includes("return"))
+        if(!rent_car.map(item => item.rent_car).includes(id.current.value)||!rent_car.map(item => item.status).includes("rent"))
         {
             axios.delete(url+'/api/car/'+id.current.value).then(response=>{
                 setProducts(response.data);

@@ -8,7 +8,7 @@ const Item=({props,start,end})=>{
         navigate('/selectcar', { state: { item: props,date_start:start,date_end:end } });
       };
     return (<div id='item' onClick={() => {
-        if (start !== undefined && end !== undefined) {
+        if (start != undefined && end != undefined) {
             selectcar();
         } else {
             alert("Please select start and end dates.");
@@ -25,6 +25,7 @@ export default function List(){
     const [types,settypes] = useState("empty");
     const [start,setstart] = useState();
     const [end,setend] = useState();
+    const [rent_car,setrent_car] = useState([])
     const url = "http://localhost:5000";
     useEffect(()=>{
         axios.get(url+'/api/car').then(response=>{
@@ -32,12 +33,43 @@ export default function List(){
         }).catch(error=>{
             console.log("error");
         });
+        axios.get(url+'/api/rentcar').then(response=>{
+            setrent_car(response.data);
+        }).catch(error=>{
+            console.log("error");
+        });
         return ()=>{
 
         }
     },[])
-    var productlist=products.filter(item => (item.location === location || location === "empty") && (item.type === types || types === "empty"))
-    .map(item => <Item props={item} start={start} end={end}/>);
+    function checkDateOverlap(startDate1, endDate1, startDate2, endDate2) {
+    return startDate1 < endDate2 && startDate2 < endDate1;
+}
+var productlist = products
+.filter(product => 
+  (product.location === location || location === "empty") &&
+  (product.type === types || types === "empty")
+)
+.filter(product => {
+  const isRented = rent_car
+    .filter(rent => rent.status === "rent" && rent.rent_car === product.id.toString())
+    .some(rent => {
+      const rentalStart = new Date(rent.date_start);
+      const rentalEnd = new Date(rent.date_end);
+      const selectedStart = new Date(start);
+      const selectedEnd = new Date(end);
+      return checkDateOverlap(rentalStart, rentalEnd, selectedStart, selectedEnd);
+    });
+  return !isRented;
+})
+.map(product => (
+  <Item 
+    props={product} 
+    start={start} 
+    end={end} 
+  />
+));
+
     const hendlechange=(event)=>{
         setlocation(event.target.value);
     }
