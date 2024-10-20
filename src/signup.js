@@ -26,9 +26,12 @@ export default function Signup() {
         if(username!==undefined&&password!==undefined&&email!==undefined)
         {
             axios.post(url+'/api/customer',customer).then(response=>{
-                const {id} = response.data[0];
+                const {id} = response.data[response.data.length - 1];
                 localStorage.setItem('id', id);
                  navigate('/list')
+            }).catch(error=>{
+                console.log(error)
+                alert("username ซ้ำ")
             });
         }
         else{

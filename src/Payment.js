@@ -30,6 +30,7 @@ export default function Payment() {
             date_end:date_end,
             return_location:locationreturn,
             rent_late:0,
+            status:"rent",
             income:item.price
         }
         axios.post(url+'/api/rentcar',detail)

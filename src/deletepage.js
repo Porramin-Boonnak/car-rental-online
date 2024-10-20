@@ -29,7 +29,6 @@ export default function Deletepage(){
 
         axios.get("http://localhost:5000/api/rentcar").then(response=>{
             setrent_car(response.data);
-            console.log(response.data)
         }).catch(error=>{
             console.log("error");
         });
@@ -42,7 +41,7 @@ export default function Deletepage(){
     }
     const id = useRef(null);
     const Handleclick=()=>{
-        if(!rent_car.map(item => item.rent_car).includes(id.current.value))
+        if(!rent_car.map(item => item.rent_car).includes(id.current.value)||rent_car.map(item => item.status).includes("return"))
         {
             axios.delete(url+'/api/car/'+id.current.value).then(response=>{
                 setProducts(response.data);
@@ -52,7 +51,7 @@ export default function Deletepage(){
             alert("This id is rent");
         }
     }
-    var productlist=products.filter(item => !rent_car.some(rent => rent.rent_car === item.id)).map(item => <Item {...item} ondelete={updatedata}/>);
+    var productlist=products.filter(item => !rent_car.some(rent => rent.rent_car == item.id&&rent.status==="rent")).map(item => <Item {...item} ondelete={updatedata}/>);
     return (<>
     <div id='deletepage'>
         <div id='deletesearch'>
