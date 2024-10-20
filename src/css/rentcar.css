@@ -1,4 +1,4 @@
-#deletepage{
+#rentcarpage{
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(5,1fr);
@@ -6,22 +6,16 @@
     max-width: 100vw;
     max-height: 100vh;
 }
-#deleteitem{
+#rentcaritem{
     border-radius: 20px;
     border-style: solid;
     border-color: black;
     padding: 10px;
 }
-#deletecontent{
+#rentcarcontent{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
-    grid-column: 1/6;
-    grid-row: 2/5;
-}
-#deletesearch{
-    justify-self: center;
-    align-self: center;
-    grid-column: 2/6;
-    grid-row: 1;
+    grid-column: 1/5;
+    grid-row: 1/5;
 }
