@@ -1,37 +1,77 @@
 import '../css/status.css'
-export default function status() {
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Imgrent from '../4965302.png'
+import Imgreturn from '../car-return.png'
+export default function Status() {
+    const url = "http://localhost:5000";
+    const [rentcar,setrentcar] = useState([]);
+    const [products,setProducts] = useState([])
+    useEffect(()=>{
+
+        axios.post(url+'/api/customer/status',{token : localStorage.getItem('token')}).then(response=>{
+            console.log(response.data)
+            setrentcar(response.data);
+        }).catch(error=>{
+            alert("please login ");
+        });
+        axios.get(url+'/api/car').then(response=>{
+            setProducts(response.data);
+        }).catch(error=>{
+            console.log("error");
+        });
+    },[])
+
+    const userstatus = rentcar.length > 0 ? rentcar[0].username : 'await';
+
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+        const dayOfWeek = days[date.getDay()]; 
+        const day = date.getDate(); 
+        const month = months[date.getMonth()]; 
+        const year = date.getFullYear(); 
+    
+        return `${dayOfWeek} ${day} ${month} ${year}`;
+    }
+
+    const statusList = products
+    .filter(item => rentcar.some(rent => parseInt(rent.rent_car) === item.id))
+    .map(item => {
+        const rent = rentcar.find(rent => parseInt(rent.rent_car) === item.id);
+        return (
+            <>
+                <img id='imgcarrent' src={item.img} alt="Car" />
+                <div id='boxdetail'>
+                    <label id='status_receive'>สถานที่รับ: {rent.location}</label>
+                    <label id='status_return'>สถานที่คืน: {rent.return_location}</label>
+                    <label id='status_start'>Start <br/>{formatDate(rent.date_start)}</label>
+                    <label id='status_end'>End <br/>{formatDate(rent.date_end)}</label>
+                    {rent.status === "rent" ? (
+                        <>
+                            <img className='img_status' src={Imgrent} style={{ backgroundColor: 'aquamarine' }}/>
+                            <label id='status_label' style={{color: 'rgb(0, 196, 33)'}}>กำลังยืม</label>
+                        </>
+                    ) : <>
+                        <img className='img_status' src={Imgreturn} style={{ backgroundColor: 'rgba(255, 0, 0, 0.554)' }}/>
+                        <label id='status_label' style={{color: 'rgba(255, 0, 0, 0.554)'}}>คืนแล้ว</label>
+                    </>}
+        
+                </div>
+            </>
+        );
+    });
     return (<>
         <div id='mainstaus'>
-            <div id = "borderstatus">
-            <img id="picprostatus" src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt='car'/>
+            <div id='bigbox'>
+                <label id='nameforuser'>Username : {userstatus}</label>
+                <img id='userlogo' src='https://cdn-icons-png.flaticon.com/512/9187/9187604.png'/>
             </div>
-
-            <label id = "namestatus">name: </label>
-            <label id = "realnamestatus">....</label>
-
-            <div id = "bigbox">
-            <img id="carselect" src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt='car'/>
-
-
+            <div id='rentcarlist'>
+                {statusList}
             </div>
-            <div id = "bigbox2">
-            
-            </div>
-            <label id = "come">สถานที่รับ:</label><br/>
-            <label id = "out">สถานที่คืน:</label><br/>
-            <label id = "comedate">label</label>
-            <label id = "outdate">label</label>
-            <div id = "comeoutdate"><input type="date" placeholder="MM/DD/YYYY" className='InputDate'></input></div>
-            <div id = "comeoutdate1"><input type="date" placeholder="MM/DD/YYYY" className='InputDate'></input></div>
-            <img id = "checkpic"src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="Document Icon"/>
-            <div id = "rounded-rectangle"></div>
-            <img id = "checkpic1"src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="Document Icon"/>
-            <div id = "rounded-rectangle1"></div>
-            <img id = "checkpic2"src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="Document Icon"/>
-            <label id = "textlastlabel">label</label>
-            
-
-            
         </div>
     </>)
 }
