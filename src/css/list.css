@@ -19,7 +19,7 @@
     color: #929292;
 }
 #textstartlist{
-    margin-top: 48px;
+    margin-top: 5%;
     margin-left: 15%;
     grid-column: 4/5;
     grid-row: 1;
@@ -29,7 +29,6 @@
     grid-row: 1;
     margin-top: 50px;
     margin-right: 20%;
-    justify-self: center;
     border-radius: 20px;
     max-height: 50px;
     height: 20%;
@@ -38,8 +37,7 @@
     color: #929292;
 }
 #textendlist{
-    margin-top: 48px;
-    
+    margin-top: 5%;
     margin-left: 5%;
     grid-column: 5/6;
     grid-row: 1;
