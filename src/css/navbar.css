@@ -1,0 +1,100 @@
+.containernavbar{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: 0.5fr;
+    align-items: center;
+    justify-items: center;
+
+    width: 100%;
+    height: 40px;
+    background-color: salmon;
+}
+#logologinNav{
+    align-self: center;
+    justify-self: center;
+    height: 30px;
+    grid-row: 1;
+}
+#textloginNav{
+    align-self: center;
+    justify-self: center;
+    font-size: 15px;
+    margin-bottom: 10%;
+    grid-row: 1;
+}
+#grouploginNav{
+    grid-column: 10/11;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2%;
+    font-size: 25px;
+    color: #000000;
+    border-width: 0cap;
+    background-color: salmon;
+    transition: color 0.3s;
+}
+#grouplogoutNav:hover {
+    color: rgb(61, 30, 117) /* สีใหม่เมื่อเมาส์ชี้ */
+}
+#logologoutNav{
+    align-self: center;
+    justify-self: center;
+    height: 30px;
+    grid-row: 1;
+}
+#textlogoutNav{
+    align-self: center;
+    justify-self: center;
+    font-size: 15px;
+    margin-bottom: 10%;
+    grid-row: 1;
+}
+#grouplogoutNav{
+    grid-column: 10/11;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2%;
+    font-size: 25px;
+    color: #000000;
+    border-width: 0cap;
+    background-color: salmon;
+    transition: color 0.3s;
+}
+#grouplogoutNav:hover {
+    color: rgb(61, 30, 117) /* สีใหม่เมื่อเมาส์ชี้ */
+}
+#user{
+    grid-column: 9/10;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2%;
+    font-size: 25px;
+    color: #000000;
+    border-width: 0cap;
+    background-color: salmon;
+    transition: color 0.3s;
+    grid-row: 1;
+}
+#user:hover {
+    color: rgb(61, 30, 117); /* สีใหม่เมื่อเมาส์ชี้ */
+}
+#userNav{
+    align-self: center;
+    justify-self: center;
+    height: 25px;
+    grid-column: 2;
+    grid-row: 1;
+
+}
+#iduserNav{
+    align-self: center;
+    justify-self: center;
+    grid-column: 1;
+    font-size: 20px;
+    margin-bottom: -5%;
+
+}
+#logohomeNav{
+    grid-column: ;
+    height: 25px;
+}
