@@ -8,7 +8,7 @@ export default function Addcar(){
     const type=useRef();
     const location=useRef();
     const img=useRef();
-    const url = "http://localhost:5000";
+    const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
     const handleclick=()=>{
         const data = {
             name:name.current.value,

@@ -26,7 +26,7 @@ export default function List(){
     const [start,setstart] = useState();
     const [end,setend] = useState();
     const [rent_car,setrent_car] = useState([])
-    const url = "http://localhost:5000";
+    const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
     useEffect(()=>{
         axios.get(url+'/api/car').then(response=>{
             setProducts(response.data);

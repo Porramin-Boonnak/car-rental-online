@@ -1,7 +1,7 @@
 import '../css/deletepage.css'
 import { useEffect, useState,useRef } from 'react';
 import axios from 'axios';
-const url = "http://localhost:5000";
+const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
 const Item=({ id, img, name, price, location,ondelete,seat,detail,type,onupdate })=>{
     const Handleclick=(id)=>{
         axios.delete(url+'/api/car/'+id).then(response=>{
@@ -30,7 +30,7 @@ export default function Deletepage(){
             console.log("error");
         });
 
-        axios.get("http://localhost:5000/api/rentcar").then(response=>{
+        axios.get(url+"/api/rentcar").then(response=>{
             setrent_car(response.data);
         }).catch(error=>{
             console.log("error");

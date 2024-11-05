@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 export default function Signup() {
     const navigate = useNavigate();
-    const url = "http://localhost:5000";
+    const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
     const [username,setusername] = useState();
     const [password,setpassword] = useState();
     const [email,setemail] = useState();
