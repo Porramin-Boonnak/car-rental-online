@@ -5,11 +5,11 @@ export default function Home() {
             <>
             <div id="container">
                 <div id= "logologin "></div>
-                
+                <img src={logo} id="logohome" />
                 <div id= "image"></div>
                     <br/>
                         <div id = "groupinput">
-                            <img src={logo} id="logohome" />
+                            
                             <select id="locationhome" >
                                 <option value="empty">--Please choose a location--</option>
                                 <option value="bangkok">Bangkok</option>
