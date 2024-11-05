@@ -32,10 +32,15 @@ export default function Login() {
                     <label>Password</label><br />
                     <input type="text" ref={password}/>
                 </div>
+
+
                 <div id="signup">
-                    <label>Signup</label>
+                <a href="/signup" target="_self">Signup</a>    
                 </div>
+                <button id = "adminb">Admin</button>
                 <input id="blogin" type='submit' onClick={Handleclick} value='login'/>
+                
+                
             </div>
         </div>
     </>)
