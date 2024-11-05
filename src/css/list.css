@@ -68,7 +68,7 @@
     border-top-right-radius: 20px; 
     border-bottom-right-radius: 20px;
     height: 100vh;
-    width: 200px;
+    width: 15%;
 
 }
 #buttoncar {
@@ -106,8 +106,15 @@
     border-radius: 20px;
 }
 #item{
+    height: 100%;
+    width : 70%;
     border-radius: 20px;
-    border-color: rgb(71, 71, 71);
-    border-width: 3px;
+    border-color: rgb(124, 124, 124);
+    border-style: solid;
+    border-width: 2px;
     padding: 10px;
+}
+#imagecarlist{
+    pointer-events: none; 
+    z-index: -1;
 }
