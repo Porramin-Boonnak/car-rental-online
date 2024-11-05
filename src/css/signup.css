@@ -14,11 +14,11 @@
 #logopicsignup{
     height: 100px;
 }
-#blueboxsignup{
+#aablueboxsignup{
     background-color: azure;
     border-radius: 20px;
     width: 210px;
-    height: 100%;
+    margin-bottom: 250px;
     grid-row: 2/4;
 }
 #usernamesignup{
