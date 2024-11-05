@@ -7,7 +7,7 @@
     height: 100vh;
     justify-items: center;
     align-items: center;
-    background-image: url('https://autostation.com/wp-content/uploads/2023/04/Mclaren-750-S-30-2048x1365-1.jpg');
+    background-image: url('../carbg.png');
     background-size: cover;
     background-position: center;
 }
