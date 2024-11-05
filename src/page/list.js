@@ -89,12 +89,12 @@ var productlist = products
             type="date"
             id='startlist'
             onChange={date_start}/>
-        <label id='textstartlist'>Start</label>
+        <label id="datestarttext">Start:</label>
         <input
             type="date"
             id='endlist'
             onChange={date_end}/>
-        <label id='textendlist'>End</label>
+        <label id="dateendtext">End:</label>
         <select id="locationlist" onChange={hendlechange}>
             <option value="empty">--Please choose a location--</option>
             <option value="bangkok">Bangkok</option>

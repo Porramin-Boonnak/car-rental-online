@@ -34,9 +34,9 @@ export default function Home() {
                             </select>
                             
                             <input id="date1" type="date" placeholder="MM/DD/YYYY" ></input>
-                            <label id="date1">-Start-</label>
+                            <label id="date1text">Start:</label>
                             <input id="date2" type="date" placeholder="MM/DD/YYYY" ></input>
-                            <label id="date2">-End-</label>
+                            <label id="date2text" >End:</label>
                             <button id="buttonSearch">Search your car</button>
                         </div>
                     
