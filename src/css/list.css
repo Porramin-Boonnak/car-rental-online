@@ -11,6 +11,7 @@
     grid-row: 1;
     margin-top: 50px;
     justify-self: center;
+    justify-items: center;
     border-radius: 20px;
     max-height: 50px;
     height: 50%;
@@ -23,8 +24,8 @@
     margin-left: 15%;
     grid-column: 4/5;
     grid-row: 1;
-    margin-left: 5%;
-    margin-top: 3%;
+    margin-left: 15%;
+    margin-top: 13.5%;
     pointer-events: none; 
 }
 #endlist{
@@ -34,9 +35,10 @@
     margin-right: 20%;
     border-radius: 20px;
     max-height: 50px;
-    height: 20%;
+    height: 50%;
     border-color: #929292;
     width: 80%;
+    justify-items: center;
     color: #929292;
 }
 #dateendtext{
@@ -44,13 +46,13 @@
     grid-column: 5/6;
     grid-row: 1;
     margin-left: 5%;
-    margin-top: 3%;
+    margin-top: 13.5%;
     pointer-events: none; 
 }
 #locationlist{
     grid-column: 2/4;
     grid-row: 1;
-    height: 20%;
+    height: 50%;
     border-radius: 20px;
     margin-top: 50px;
     max-height: 50px;
@@ -105,7 +107,7 @@
 }
 #item{
     border-radius: 20px;
-    border-color: rgb(59, 53, 53);
-    border-style: solid;
+    border-color: rgb(71, 71, 71);
+    border-width: 3px;
     padding: 10px;
 }
