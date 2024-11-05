@@ -13,11 +13,8 @@ export default function Login() {
             password : password.current.value
         }
         axios.post(url+'/api/customerlogin',data).then(response=>{
-            if(response.data==="Successfully")
-            {
-                console.log(response.data)
-                navigate('/list');
-            }
+            localStorage.setItem('token', response.data)
+            navigate('/list');
         }).catch(error=>{
             alert("Username and password do not match")
         });

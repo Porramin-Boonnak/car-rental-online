@@ -26,8 +26,7 @@ export default function Signup() {
         if(username!==undefined&&password!==undefined&&email!==undefined)
         {
             axios.post(url+'/api/customer',customer).then(response=>{
-                const {id} = response.data[response.data.length - 1];
-                localStorage.setItem('id', id);
+                localStorage.setItem('token', response.data);
                  navigate('/list')
             }).catch(error=>{
                 console.log(error)

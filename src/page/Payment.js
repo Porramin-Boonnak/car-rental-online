@@ -24,10 +24,11 @@ export default function Payment() {
     }
     const hendleclick=()=>{
         const detail = {
-            id_customer:localStorage.getItem('id'),
+            token:localStorage.getItem('token'),
             rent_car:item.id,
             date_start:date_start,
             date_end:date_end,
+            location:item.location,
             return_location:locationreturn,
             rent_late:0,
             status:"rent",
