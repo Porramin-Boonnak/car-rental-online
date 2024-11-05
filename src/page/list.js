@@ -105,7 +105,7 @@ var productlist = products
             <option value="songkhla">Songkhla</option>
         </select>
         <div id='sidebar'>
-            <button value="Home" id='buttoncar'onClick={hendleclick}>All Model</button>
+            <button value="empty" id='buttoncar'onClick={hendleclick}>All Model</button>
             <button value="PersonalCars" id='buttoncar' onClick={hendleclick}>
                 <img src='https://www.toyota.co.th/media/product/car_types/passenger.webp'/>
                 Personal Cars 
