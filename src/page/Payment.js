@@ -34,7 +34,9 @@ export default function Payment() {
             status:"rent",
             income:item.price
         }
-        axios.post(url+'/api/rentcar',detail)
+        axios.post(url+'/api/rentcar',detail).catch(error=>{
+            alert("Please login")
+        });
         navigate('/Thx', { state: { item: item} });
     }
     return (<>
