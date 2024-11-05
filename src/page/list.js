@@ -29,11 +29,13 @@ export default function List(){
     const [rent_car,setrent_car] = useState([])
     const locationFromHomepage = useLocation();
     const { state } = locationFromHomepage;
-    const startFromHome = state ? state.start : null;
-    const endFromHome = state ? state.end : null;
-    const locationFromHome = state ? state.location : null;
     const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
     useEffect(()=>{
+        if (state) {
+            setstart(state.startfromhome);
+            setend(state.endfromhome);
+            setlocation(state.locationfromhome);
+        }
         axios.get(url+'/api/car').then(response=>{
             setProducts(response.data);
         }).catch(error=>{
@@ -94,14 +96,14 @@ var productlist = products
         <input
             type="date"
             id='startlist'
-            onChange={date_start} value={startFromHome}/>
+            onChange={date_start} value={start} />
         <label id="datestarttext">Start:</label>
         <input
             type="date"
             id='endlist'
-            onChange={date_end} value={endFromHome}/>
+            onChange={date_end} value={end} />
         <label id="dateendtext">End:</label>
-        <select id="locationlist" onChange={hendlechange} value={locationFromHome}>
+        <select id="locationlist" onChange={hendlechange} value={location} >
             <option value="empty">--Please choose a location--</option>
             <option value="bangkok">Bangkok</option>
             <option value="chiang Mai">Chiang Mai</option>
