@@ -5,20 +5,20 @@
     gap: 10px;
     width: 100vw;
     height: 100vh;
+    background-image: url('../carbg.png');
     justify-items: center;
     align-items: center;
-    background-image: url('https://autostation.com/wp-content/uploads/2023/04/Mclaren-750-S-30-2048x1365-1.jpg');
     background-size: cover;
     background-position: center;
 }
 #logopicsignup{
     height: 100px;
 }
-#blueboxsignup{
+#aablueboxsignup{
     background-color: azure;
     border-radius: 20px;
     width: 210px;
-    height: 100%;
+    margin-bottom: 250px;
     grid-row: 2/4;
 }
 #usernamesignup{

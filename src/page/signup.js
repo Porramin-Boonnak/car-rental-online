@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../css/signup.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import Carbg from '../carbg.png'
 export default function Signup() {
     const navigate = useNavigate();
     const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
@@ -40,8 +41,8 @@ export default function Signup() {
     return (<>
         <div id='mainsignup'>
         <img id="logopicsignup" src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt='car'/>
-            <div id="bluebox">           
-                <label id = "sign">Sign up</label>
+            <div id="aablueboxsignup">           
+                <label id = "sign">Sign up</label><br/>
                 <div id="usernamesignup">
                     <label>Username</label>
                     <input type="text" onChange={hendleusernames}/>
