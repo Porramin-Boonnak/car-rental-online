@@ -28,7 +28,7 @@ export default function Home() {
                 <section class="slider-container">
                     <div class="slider-wrapper">
                         <div class="slider">
-                        <img id="slide-1" src="https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/VLP/almera-my23/thumbnail/almera-model.jpg" alt="3D rendering of an imaginary orange planet in space" />
+                            <img id="slide-1" src="https://www-asia.nissan-cdn.net/content/dam/Nissan/th/vehicles/VLP/almera-my23/thumbnail/almera-model.jpg" alt="3D rendering of an imaginary orange planet in space" />
                             <img id="slide-2" src="https://cf.autodeft2.pw/uploads/images/2014/Honda%20Jazz%20EU/2015-Honda-Jazz-1.jpg" alt="3D rendering of an imaginary green planet in space" />
                             <img id="slide-3" src="https://app.exclusive.co.th/file/car/H.png" alt="3D rendering of an imaginary blue planet in space" />
                         </div>
