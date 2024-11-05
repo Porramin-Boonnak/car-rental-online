@@ -1,4 +1,4 @@
-import './css/Thx.css'
+import '../css/Thx.css'
 import { useLocation,useNavigate } from 'react-router-dom';
 export default function Thx() {
     const location = useLocation();

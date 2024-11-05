@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import './css/login.css'
+import '../css/login.css'
 import axios from 'axios';
 export default function Login() {
     const url = "http://localhost:5000";

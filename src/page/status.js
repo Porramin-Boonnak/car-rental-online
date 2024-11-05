@@ -1,4 +1,4 @@
-import './css/status.css'
+import '../css/status.css'
 export default function status() {
     return (<>
         <div id='mainstaus'>

@@ -1,6 +1,6 @@
-import './css/Payment.css'
+import '../css/Payment.css'
 import { useLocation,useNavigate } from 'react-router-dom';
-import Img from './Tag.jpg'
+import Img from '../Tag.jpg'
 import axios from 'axios';
 export default function Payment() {
     const url = "http://localhost:5000";

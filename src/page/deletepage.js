@@ -1,4 +1,4 @@
-import './css/deletepage.css'
+import '../css/deletepage.css'
 import { useEffect, useState,useRef } from 'react';
 import axios from 'axios';
 const url = "http://localhost:5000";

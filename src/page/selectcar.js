@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './css/selectcar.css'
+import '../css/selectcar.css'
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 export default function Selectcar() {

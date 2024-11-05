@@ -1,5 +1,5 @@
 import { useState,useEffect} from 'react'
-import './css/admin.css'
+import '../css/admin.css'
 import Deletepage from './deletepage'
 import Returncar from './returncar'
 import Addcar from './addcar'
