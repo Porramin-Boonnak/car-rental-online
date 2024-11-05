@@ -85,16 +85,16 @@ var productlist = products
     return (<>
     <div id='main'>
         <label id='textstartlist'>Start</label>
-            <input
-                type="date"
-                id='startlist'
-                onChange={date_start}/>
-            <label id='textendlist'>End</label>
-            <input
-                type="date"
-                id='endlist'
-                onChange={date_end}/>
-            <select id="locationlist" onChange={hendlechange}>
+        <input
+            type="date"
+            id='startlist'
+            onChange={date_start}/>
+        <label id='textendlist'>End</label>
+        <input
+            type="date"
+            id='endlist'
+            onChange={date_end}/>
+        <select id="locationlist" onChange={hendlechange}>
             <option value="empty">--Please choose a location--</option>
             <option value="bangkok">Bangkok</option>
             <option value="chiang Mai">Chiang Mai</option>
