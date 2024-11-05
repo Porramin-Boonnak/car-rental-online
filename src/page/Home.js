@@ -1,39 +1,34 @@
 import '../css/Home.css'
+import logo from '../carlogo.png'
 export default function Home() {
-    return (<>
-
-        <div>
-            <div id="homebackG">
-
-                <div id="tabbar">
-                    <img src = "https://cdn-icons-png.flaticon.com/512/4254/4254068.png" alt = "Hamburger"/>
-                    <img id="profileicon" src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" width="45" height="47" alt="Profile Icon" />
-                </div>
-                <img id="logoicon" src="https://pngimg.com/uploads/Mclaren/Mclaren_PNG2.png" width="280" height="150" alt="McLaren Logo" />
-                <div id="center">
-                    
-                    
+    return (
+            <>
+            <div id="container">
+                <div id= "logologin "></div>
+                
+                <div id= "image"></div>
                     <br/>
-                    <span id = "test">
+                        <div id = "groupinput">
+                            <img src={logo} id="logohome" />
+                            <select id="locationhome" >
+                                <option value="empty">--Please choose a location--</option>
+                                <option value="bangkok">Bangkok</option>
+                                <option value="chiang Mai">Chiang Mai</option>
+                                <option value="chonburi">Chonburi</option>
+                                <option value="phuket">Phuket</option>
+                                <option value="ubon Ratchathani">Ubon Ratchathani</option>
+                                <option value="songkhla">Songkhla</option>
+                            </select>
+                            
+                            <input id="date1" type="date" placeholder="MM/DD/YYYY" ></input>
+                            <label id="date1">-Start-</label>
+                            <input id="date2" type="date" placeholder="MM/DD/YYYY" ></input>
+                            <label id="date2">-End-</label>
+                            <button id="buttonSearch">Search your car</button>
+                        </div>
                     
-                        <span id = "groupinput">
-                        <div id = "check"><input type = "text" placeholder="Location" id = "Locate"></input></div>
-                        <input type="date" placeholder="MM/DD/YYYY" className='InputDate'></input>
-                        <input type="date" placeholder="MM/DD/YYYY" className='InputDate'></input>
-                        </span>
-                        
-                    </span>
-                    <span>
-                        <img src = "https://www.headlightmag.com/hlmwp/wp-content/uploads/2023/04/Mclaren-750S_01.jpg" width="300" height="180"/>
-                        </span>
-
-                    
-
-
-
-
-                </div>
+                      
             </div>
-        </div>
-    </>)
+            </>
+    )
 }
