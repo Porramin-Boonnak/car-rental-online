@@ -40,7 +40,6 @@ export default function Signup() {
     }
     return (<>
         <div id='mainsignup'>
-        <img id="logopicsignup" src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt='car'/>
             <div id="aablueboxsignup">           
                 <label id = "sign">Sign up</label><br/>
                 <div id="usernamesignup">
