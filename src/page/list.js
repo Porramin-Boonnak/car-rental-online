@@ -84,16 +84,17 @@ var productlist = products
     }
     return (<>
     <div id='main'>
-        <label id='textstartlist'>Start</label>
+        
         <input
             type="date"
             id='startlist'
             onChange={date_start}/>
-        <label id='textendlist'>End</label>
+        <label id='textstartlist'>Start</label>
         <input
             type="date"
             id='endlist'
             onChange={date_end}/>
+        <label id='textendlist'>End</label>
         <select id="locationlist" onChange={hendlechange}>
             <option value="empty">--Please choose a location--</option>
             <option value="bangkok">Bangkok</option>
@@ -104,10 +105,23 @@ var productlist = products
             <option value="songkhla">Songkhla</option>
         </select>
         <div id='sidebar'>
-            <button value="empty" onClick={hendleclick}>Reset</button>
-            <button value="3 door" onClick={hendleclick}>รถ3ประตู</button>
-            <button  value="4 door" onClick={hendleclick}>รถ4ประตู</button>
-            <button  value="5 door" onClick={hendleclick}>รถ5ประตู</button>
+            <button value="Home" id='buttoncar'onClick={hendleclick}>All Model</button>
+            <button value="PersonalCars" id='buttoncar' onClick={hendleclick}>
+                <img src='https://www.toyota.co.th/media/product/car_types/passenger.webp'/>
+                Personal Cars 
+            </button>
+            <button  value="SUV" id='buttoncar' onClick={hendleclick}>
+                <img src='https://www.toyota.co.th/media/product/car_types/suv.webp'/>
+                SUV&PPV
+            </button>
+            <button  value="MPV" id='buttoncar' onClick={hendleclick}>
+                <img src='https://www.toyota.co.th/media/product/car_types/mpv.webp'/>
+                MPV
+            </button>
+            <button  value="Commercial Cars" id='buttoncar' onClick={hendleclick}>
+                <img src='https://www.toyota.co.th/media/product/car_types/commercial.webp'/>
+                Commercial Cars
+            </button>
             
         </div>
         <div id='content'>
