@@ -2,6 +2,7 @@ import '../css/list.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 const Item=({props,start,end})=>{
     const navigate = useNavigate();
     const selectcar = () => {
@@ -26,6 +27,11 @@ export default function List(){
     const [start,setstart] = useState();
     const [end,setend] = useState();
     const [rent_car,setrent_car] = useState([])
+    const locationFromHomepage = useLocation();
+    const { state } = locationFromHomepage;
+    const startFromHome = state ? state.start : null;
+    const endFromHome = state ? state.end : null;
+    const locationFromHome = state ? state.location : null;
     const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
     useEffect(()=>{
         axios.get(url+'/api/car').then(response=>{
@@ -88,14 +94,14 @@ var productlist = products
         <input
             type="date"
             id='startlist'
-            onChange={date_start}/>
+            onChange={date_start} value={startFromHome}/>
         <label id="datestarttext">Start:</label>
         <input
             type="date"
             id='endlist'
-            onChange={date_end}/>
+            onChange={date_end} value={endFromHome}/>
         <label id="dateendtext">End:</label>
-        <select id="locationlist" onChange={hendlechange}>
+        <select id="locationlist" onChange={hendlechange} value={locationFromHome}>
             <option value="empty">--Please choose a location--</option>
             <option value="bangkok">Bangkok</option>
             <option value="chiang Mai">Chiang Mai</option>

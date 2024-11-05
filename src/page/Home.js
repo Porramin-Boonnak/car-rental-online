@@ -1,6 +1,25 @@
 import '../css/Home.css'
 import logo from '../carlogo.png'
+import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
 export default function Home() {
+    const navigate = useNavigate();
+    const start_ref = useRef(null);
+    const end_ref = useRef(null);
+    const location_ref = useRef(null);
+    const hendleclick = () =>{
+        const startValue = start_ref.current.value;
+        const endValue = end_ref.current.value;
+        const locationValue = location_ref.current.value;
+
+        if (startValue && endValue && locationValue !== null) {
+            navigate('/list', { state: { startfromhome: startValue, endfromhome: endValue, locationfromhome: locationValue } });
+        } else {
+            alert("Please select start date, end date, and location.");
+        }
+        
+        
+    }
     return (
             <>
             <div id="container">
@@ -23,7 +42,7 @@ export default function Home() {
                     <br/>
                         <div id = "groupinput">
                             
-                            <select id="locationhome" >
+                            <select id="locationhome" ref={location_ref}>
                                 <option value="empty">--Please choose a location--</option>
                                 <option value="bangkok">Bangkok</option>
                                 <option value="chiang Mai">Chiang Mai</option>
@@ -33,11 +52,11 @@ export default function Home() {
                                 <option value="songkhla">Songkhla</option>
                             </select>
                             
-                            <input id="date1" type="date" placeholder="MM/DD/YYYY" ></input>
+                            <input id="date1" type="date" placeholder="MM/DD/YYYY" ref={start_ref}></input>
                             <label id="date1text">Start:</label>
-                            <input id="date2" type="date" placeholder="MM/DD/YYYY" ></input>
+                            <input id="date2" type="date" placeholder="MM/DD/YYYY" ref={end_ref}></input>
                             <label id="date2text" >End:</label>
-                            <button id="buttonSearch">Search your car</button>
+                            <button id="buttonSearch" onClick={hendleclick}>Search your car</button>
                         </div>
                     
                       
