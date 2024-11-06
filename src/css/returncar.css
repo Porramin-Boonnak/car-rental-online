@@ -11,6 +11,7 @@
     border-style: solid;
     border-color: black;
     padding: 10px;
+    margin-top: 50px;
 }
 #rentcarcontent{
     display: grid;
