@@ -24,7 +24,7 @@ export default function Addcar(){
         })
     }
     return(<>
-        <div id='boxinput'>
+        <div id='boxinputaddcar'>
             <input type="text" placeholder="name" ref={name}/><br/>
             <input type="number" placeholder="price" ref={price}/><br/>
             <input type="number" placeholder="seat" ref={seat}/><br/>
