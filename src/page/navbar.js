@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import '../css/navbar.css'
 
 export default function Nevbar(){
-    const url = "52.187.25.101:5000";
+    const url = "http://52.187.25.101:5000";
     const [customer,setcustomer] = useState([]);
     useEffect(()=>{
 

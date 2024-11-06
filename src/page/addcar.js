@@ -8,7 +8,7 @@ export default function Addcar(){
     const type=useRef();
     const location=useRef();
     const img=useRef();
-    const url = "52.187.25.101:5000";
+    const url = "http://52.187.25.101:5000";
     const handleclick=()=>{
         const data = {
             name:name.current.value,

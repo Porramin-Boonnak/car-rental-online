@@ -29,7 +29,7 @@ export default function List(){
     const [rent_car,setrent_car] = useState([])
     const locationFromHomepage = useLocation();
     const { state } = locationFromHomepage;
-    const url = "52.187.25.101:5000";
+    const url = "http://52.187.25.101:5000";
     useEffect(()=>{
         if (state) {
             setstart(state.startfromhome);

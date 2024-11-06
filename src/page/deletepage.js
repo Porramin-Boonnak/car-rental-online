@@ -1,7 +1,7 @@
 import '../css/deletepage.css'
 import { useEffect, useState,useRef } from 'react';
 import axios from 'axios';
-const url = "52.187.25.101:5000";
+const url = "http://52.187.25.101:5000";
 const Item=({ id, img, name, price, location,ondelete,seat,detail,type,onupdate })=>{
     const Handleclick=(id)=>{
         axios.delete(url+'/api/car/'+id).then(response=>{

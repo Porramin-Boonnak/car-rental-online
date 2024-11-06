@@ -2,10 +2,9 @@ import { useState } from 'react'
 import '../css/signup.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-import Carbg from '../carbg.png'
 export default function Signup() {
     const navigate = useNavigate();
-    const url = "52.187.25.101:5000";
+    const url = "http://52.187.25.101:5000";
     const [username,setusername] = useState();
     const [password,setpassword] = useState();
     const [email,setemail] = useState();

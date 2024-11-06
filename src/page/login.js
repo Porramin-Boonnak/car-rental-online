@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../css/login.css'
 import axios from 'axios';
 export default function Login() {
-    const url = "52.187.25.101:5000";
+    const url = "http://52.187.25.101:5000";
     const username = useRef(null);
     const password = useRef(null);
     const usernameadmin = "admin-car-rental";
