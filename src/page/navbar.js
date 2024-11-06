@@ -31,7 +31,7 @@ export default function Nevbar(){
                                                     <h1 id="textloginNav">LOGIN</h1>
                                                     <FontAwesomeIcon id="logologinNav" icon={faRightToBracket} />
                                                     </a>;
-    return (<>
+    return (<div id="contentnavbar">
         <a className="containernavbar" href="/">
             <FontAwesomeIcon id="logohomeNav" icon={faHome} />
             {customerstatus}
@@ -39,5 +39,5 @@ export default function Nevbar(){
         </a>
         <Router />
         
-    </>)
+    </div>)
 }
