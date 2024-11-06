@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Imgrent from '../4965302.png'
 import Imgreturn from '../car-return.png'
 export default function Status() {
-    const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
+    const url = "52.187.25.101:5000";
     const [rentcar,setrentcar] = useState([]);
     const [products,setProducts] = useState([])
     useEffect(()=>{

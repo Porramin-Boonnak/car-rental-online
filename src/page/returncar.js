@@ -1,7 +1,7 @@
 import '../css/returncar.css'
 import { useEffect, useState,useRef } from 'react';
 import axios from 'axios';
-const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
+const url = "52.187.25.101:5000";
 const Item=({ id, img, name, price, location,isCustomer,returnlocation,update,isshop})=>{
     const rent_late = useRef("");
     const hendleclick=(shop)=>{

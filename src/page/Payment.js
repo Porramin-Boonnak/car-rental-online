@@ -3,7 +3,7 @@ import { useLocation,useNavigate } from 'react-router-dom';
 import Img from '../Tag.jpg'
 import axios from 'axios';
 export default function Payment() {
-    const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
+    const url = "52.187.25.101:5000";
     const location = useLocation();
     const navigate = useNavigate();
     const { item } = location.state;

@@ -29,7 +29,7 @@ export default function List(){
     const [rent_car,setrent_car] = useState([])
     const locationFromHomepage = useLocation();
     const { state } = locationFromHomepage;
-    const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
+    const url = "52.187.25.101:5000";
     useEffect(()=>{
         if (state) {
             setstart(state.startfromhome);
