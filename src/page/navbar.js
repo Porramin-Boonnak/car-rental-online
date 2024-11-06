@@ -22,22 +22,24 @@ export default function Nevbar(){
                                                     <h1 id="textlogoutNav">LOGOUT</h1>
                                                     <FontAwesomeIcon id="logologoutNav" icon={faRightFromBracket} />
                                                 </button>
-                                                <button id="user">
+                                                <a id="user" href="/status">
                                                     <label id="iduserNav">{customer[0].username}</label>
                                                     <FontAwesomeIcon id="userNav" icon={faUser} />
-                                                </button>
+                                                </a>
                                                 </> 
                                                 : <a id="grouploginNav" href="/login">
                                                     <h1 id="textloginNav">LOGIN</h1>
                                                     <FontAwesomeIcon id="logologinNav" icon={faRightToBracket} />
                                                     </a>;
-    return (<div id="contentnavbar">
+    return (<div >
         <a className="containernavbar" href="/">
             <FontAwesomeIcon id="logohomeNav" icon={faHome} />
             {customerstatus}
             
         </a>
+        <div id="component">
         <Router />
+        </div>
         
     </div>)
 }

@@ -99,7 +99,6 @@
     grid-column: 1/2;
     height: 25px;
 }
-#contentnavbar{
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
+#component{
+    margin-top: 20px;
 }
