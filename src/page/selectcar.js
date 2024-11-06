@@ -50,7 +50,6 @@ export default function Selectcar() {
         </select>
         </span>
         <label id='detail' >ข้อมูลโดยระเอียด {item.detail}</label>
-        <img id='logo' src='https://w7.pngwing.com/pngs/471/300/png-transparent-rolls-royce-hd-logo-thumbnail.png'/>
         <label id='location'>location rent car {item.location}</label>
         <div id='datebox'>
             <label id='textstart'>Start</label>
@@ -58,7 +57,7 @@ export default function Selectcar() {
             <label id='textend'>End</label>
             <label id='end'>{formatDate(date_end)}</label>
         </div>
-        <input id='Booking' type="button" value="Booking" onClick={hendleclick}/>
+        <input id='Booking' type="button" value="NEXT ->" onClick={hendleclick}/>
         <div id='space'></div>
 
     </div>

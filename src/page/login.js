@@ -7,6 +7,8 @@ export default function Login() {
     const url = "https://obscure-orbit-j67gj67vx4g3pqq9-5000.app.github.dev";
     const username = useRef(null);
     const password = useRef(null);
+    const usernameadmin = "admin-car-rental";
+    const passwordadmin = "1212312121";
     const navigate = useNavigate();
     const Handleclick=()=>{
         const data = {
@@ -21,9 +23,17 @@ export default function Login() {
         });
         
     }
+    const adminaccess=()=>{
+        if(username.current.value === usernameadmin && password.current.value ===passwordadmin)
+        {
+            navigate('/admin', { state: { username: usernameadmin,password:passwordadmin} });
+        }
+        else{
+            alert("usernameAdmin or passwordAdmin not match");
+        }
+    }
     return (<>
         <div id='mainlogin'>
-            <img id="logopiclogin" src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt='car'/>
             <div id="bluebox">
                 <div id="username">
                     <label>USERNAME/EMAIL</label>
@@ -38,7 +48,7 @@ export default function Login() {
                 <div id="signup">
                 <a href="/signup" target="_self">Signup</a>    
                 </div>
-                <button id = "adminb">Admin</button>
+                <button id = "adminb" onClick={adminaccess}>Admin</button>
                 <input id="blogin" type='submit' onClick={Handleclick} value='login'/>
                 
                 

@@ -3,8 +3,12 @@ import '../css/admin.css'
 import Deletepage from './deletepage'
 import Returncar from './returncar'
 import Addcar from './addcar'
+import { useLocation } from 'react-router-dom';
 export default function Admin(){
     const [page,setpage] = useState();
+    const location = useLocation();
+    const { username } = location.state;
+    const { password } = location.state;
     useEffect(()=>{
         setpage(<Deletepage />);
     },[])
