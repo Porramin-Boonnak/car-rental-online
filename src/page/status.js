@@ -65,10 +65,6 @@ export default function Status() {
     });
     return (<>
         <div id='mainstaus'>
-            <div id='bigbox'>
-                <label id='nameforuser'>Username : {userstatus}</label>
-                <img id='userlogo' src='https://cdn-icons-png.flaticon.com/512/9187/9187604.png'/>
-            </div>
             <div id='rentcarlist'>
                 {statusList}
             </div>

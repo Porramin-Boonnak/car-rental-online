@@ -5,7 +5,7 @@
     gap: 10px;
     width: 100vw;
     height: 100vh;
-    background-image: url('https://autostation.com/wp-content/uploads/2023/04/Mclaren-750-S-30-2048x1365-1.jpg');
+    background-color: aliceblue;
 }
 #bigbox{
     display: grid;
@@ -37,8 +37,9 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column: 1/6;
-    grid-row: 2/4;
+    grid-row: 1/4;
     gap: 30px;
+    margin-top: 25px;
 }
 #imgcarrent{
     border-radius: 20px;
@@ -49,6 +50,7 @@
     justify-self: center;
     border-color: black;
     border-style: solid;
+    border-width: 2px;
 }
 #boxdetail{
     display: grid;
@@ -56,9 +58,10 @@
     grid-template-rows: repeat(3, 1fr);
     grid-column: 3/6;
     border-radius: 20px;
+    border-width: 2px;
     border-style: solid;
     border-color: black;
-    height: 80%;
+    height: 300px;
     width: 95%;
     align-self: center;
     justify-self: center;
@@ -80,6 +83,7 @@
     padding: 10px;
     border-radius: 20px;
     border-style: solid;
+    border-width: 2px;
     border-color: black;
     justify-self: center;
     align-self: center;
@@ -91,6 +95,7 @@
     padding: 10px;
     border-radius: 20px;
     border-style: solid;
+    border-width: 2px;
     border-color: black;
     justify-self: center;
     align-self: center;
